@@ -5,7 +5,7 @@ vendor_lib() {
     VERSION=$2
     VENDOR_DIR=$3
 
-    echo "-----> Installing $LIBRARY-$VERSION"
+    echo "-----> Installing ${STACK}/$LIBRARY-$VERSION"
     LIBRARY_URL="https://heroku-buildpack-geo.s3.amazonaws.com/${STACK}/${LIBRARY}/${LIBRARY}-${VERSION}.tar.gz"
 
     mkdir -p "$VENDOR_DIR"
