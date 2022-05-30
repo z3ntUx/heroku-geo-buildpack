@@ -5,8 +5,8 @@ vendor_lib() {
     VERSION=$2
     VENDOR_DIR=$3
 
-    echo "-----> Installing ${STACK}/$LIBRARY-$VERSION"
-    LIBRARY_URL="https://heroku-buildpack-geo.s3.amazonaws.com/${STACK}/${LIBRARY}/${LIBRARY}-${VERSION}.tar.gz"
+    echo "-----> Installing heroku-20/$LIBRARY-$VERSION"
+    LIBRARY_URL="https://heroku-buildpack-geo.s3.amazonaws.com/heroku-20/${LIBRARY}/${LIBRARY}-${VERSION}.tar.gz"
 
     mkdir -p "$VENDOR_DIR"
     if ! curl "${LIBRARY_URL}" -s | tar zxv -C "$VENDOR_DIR" &> /dev/null; then
